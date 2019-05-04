@@ -1,5 +1,15 @@
 # Website on Climate Change
 
+## Contents
+
+1. Background 
+1. Wire Frames
+1. Colour Choices
+1. Accessibility
+1. GDPR
+1. Distance Selling
+1. Evaluation
+
 ## 1. Background
 
 Climate change is one of the **greatest** challenges that the world faces today. By simple definition, climate change is when normal climate patterns become abnormal and this can affect parts of the Earth. 
