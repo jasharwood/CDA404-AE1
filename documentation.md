@@ -17,9 +17,13 @@ Whilst global warming specifically refers to an increase in the average global t
 Climate change has mostly been caused by humans through activities such as burning fossil fuels and using land for cities and farms etc.
 
 The World Economic Forum's Global Shapers Survey 2017 surveyed 31,000 18-to-35-year-olds from 186 different countries. 48.8% of them believed that climate change was their biggest concern.
-The website that has been created aims to solve the climate change problem through education and promotion. 
+The website that has been created aims to solve the climate change problem through education and promotion. The website will have 4 pages; a home page, about page, blog page and a contact page.
 
 ## 2. Wire Frames
+
+Before the development stage, wire frames for each of the 4 pages were created.
+
+![Homepage Wireframe](https://www.incimages.com/uploaded_files/image/970x450/getty_840246746_2000145920009280151_291261.jpg)
 
 ## 3. Colour Choices
 
