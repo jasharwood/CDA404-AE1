@@ -21,9 +21,19 @@ The website that has been created aims to solve the climate change problem throu
 
 ## 2. Wire Frames
 
-Before the development stage, wire frames for each of the 4 pages were created.
+Before the development stage, low fidelity wire frames (sketches) for each of the 4 pages were created.
 
-![Homepage Wireframe](https://www.incimages.com/uploaded_files/image/970x450/getty_840246746_2000145920009280151_291261.jpg)
+### Homepage Wireframe
+![Homepage Wireframe](/images/Home.jpg)
+
+### About Page Wireframe
+![About Page Wireframe](/images/About.jpg)
+
+### Blog Page Wireframe
+![Blog Page Wireframe](/images/Blog.jpg)
+
+### Contact Page Wireframe
+![Contact Page Wireframe](/images/Contact.jpg)
 
 ## 3. Colour Choices
 
