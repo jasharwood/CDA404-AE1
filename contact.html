@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+<body>
+    
+    <!-- Nav Bar -->
+    
+    <nav id="overlay">
+        <img src="img/close.png" class="close-button" id="close-menu">  
+        
+        <ul>
+            <li>
+                <a href="index.html">home</a>
+                <span>there's no place like home!</span>
+            </li>
+            
+            <li>
+                <a href="about.html">about me</a>
+                <span>get to know me!</span>
+            </li>
+            
+            <li>
+                <a href="portfolio.html">portfolio</a>
+                <span>check out my work!</span>
+            </li>
+            
+            <li>
+                <a href="contact.html">contact</a>
+                <span>get in contact with me!</span>
+            </li>
+        </ul>
+            
+    </nav>
+    
+    <header>
+        <a href="#" class="logo">jas designs.</a>
+        <img src="img/menu.png" class="menu-button" id="open-menu">
+    </header>
+    
+    <!-- Nav Bar Javascript -->
+    
+    <script>
+        var overlay = document.getElementById('overlay')
+        var closeMenu = document.getElementById('close-menu')
+        
+        document.getElementById('open-menu').addEventListener('click', function() {
+            overlay.classList.add('show-menu');
+        });
+        
+        document.getElementById('close-menu').addEventListener('click', function() {
+            overlay.classList.remove('show-menu');
+        });
+    </script>
+    
+    <!-- Contact Me Form -->
+    
+    <div class="contact-section">
+        <h1>Contact Me</h1>
+        <div class="border"></div>
+        <form class="contact-form" action="contact.html" method="post">
+            <input type="text" class="contact-form-text" placeholder="Your name">
+            <input type="email" class="contact-form-text" placeholder="Your email">
+            <input type="text" class="contact-form-text" placeholder="Your phone">
+            <textarea class="contact-form-text" placeholder="Your message"></textarea> 
+            <input type="submit" class="contact-form-btn" value="Submit"/>
+        </form>
+        
+    </div>
+    
+    
+    
+    <!-- Social Buttons -->
+    
+    <div class="middle">
+        
+        <a class="btn" href="#">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        
+        <a class="btn" href="#">
+            <i class="fab fa-behance"></i>
+        </a>
+        
+        <a class="btn" href="#">
+            <i class="fab fa-twitter"></i>
+        </a>
+        
+        <a class="btn" href="#">
+            <i class="fab fa-instagram"></i>
+        </a>
+        
+        <a class="btn" href="#">
+            <i class="fab fa-github"></i>
+        </a>
+        
+    </div>
+    
+</body>
+</html>
