@@ -322,6 +322,7 @@ article{
     float: left;
     padding: 1em;
     text-align: center;
+    margin-bottom: 2em;
 }
 
 article img{
@@ -640,6 +641,7 @@ textarea.contact-form-text{
     margin: auto auto;
     float: left;
     margin-left: 30px;
+    margin-bottom: 15em;
 }
 
 .skills h1{
@@ -775,4 +777,57 @@ textarea.contact-form-text{
         margin: auto 30px;
         float: left;
     }
+}
+
+/* Footer */
+
+footer{
+    width: 100%;
+    background-color: #ededed;
+    padding: 20px 0;
+    float: right;
+}
+
+footer ul{
+    float: left;
+    list-style-type: none;
+    font-size: 12px;
+}
+
+footer ul li{
+    display: inline-block;
+    padding: auto 5px;
+}
+
+
+footer ul li a{
+    color: black;
+    margin-right: 30px;
+}
+
+footer .logo{
+    float: left;
+    padding-top: 10px;
+    padding-left: 40px;
+    font-size: 16px;
+}
+
+/* Making the Footer Responsive */
+
+@media (max-width: 480px){
+    footer ul li a{
+        margin-right: 20px;
+    }
+}
+
+
+/* Privacy Policy */
+
+.privacypolicy{
+    width: 80%;
+    margin-left: 20px;
+}
+
+.privacypolicy p a{
+    color: darkgray;
 }
