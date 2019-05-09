@@ -1,0 +1,778 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body, html{
+    font-family: 'Montserrat', Helvetica;
+    margin: 0;
+    background-color: #fdfdfd;
+    padding: 0;
+}
+
+body a{
+    text-decoration: none;
+}
+
+/* Navigation Bar */
+
+header{
+    padding: 2em;
+    background-color: #fdfdfd;
+}
+
+.logo {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+    
+.menu-button {
+    width: 24px;
+    float: right;
+    cursor: pointer;
+}
+
+nav{
+    position: absolute;
+    background: #fff;
+    padding: 2em;
+    width: calc(100% - 4em);
+    height: calc(100vh - 4em);
+    display: none;
+    transform: scaleX(0);
+    transform-origin: right;
+    z-index: 100;
+}
+
+.close-button{
+    width: 24px;
+    float: right;
+    cursor: pointer;
+    opacity: 0;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 15% auto 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    width: 80%;
+}
+
+nav ul a{
+    color: black;
+    font-weight: bold;
+    font-size: 2em;
+    transition: .2s ease-in;
+}
+
+nav ul a:hover{
+    font-size: 2.3em;
+}
+
+nav ul span{
+    color: #444444;
+    display: block;
+    font-size: .8em;
+    margin-top: 10px;
+}
+
+nav ul li{
+    opacity: 0;
+}
+
+.show-menu{
+    display:block;
+    animation: slide-menu 1s ease-in forwards;
+}
+.show-menu .close-button {
+    animation: show-x 1s 1s forwards;
+}
+.show-menu li:nth-of-type(1) {
+    animation: menu-item-animate .6s forwards 1s ease-in-out;
+}
+.show-menu li:nth-of-type(2) {
+    animation: menu-item-animate .6s forwards 1.2s ease-in-out;
+}
+.show-menu li:nth-of-type(3) {
+    animation: menu-item-animate .6s forwards 1.4s ease-in-out;
+}
+.show-menu li:nth-of-type(4) {
+    animation: menu-item-animate .6s forwards 1.6s ease-in-out;
+}
+@keyframes slide-menu {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+@keyframes show-x {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes menu-item-animate {
+    from {
+        transform: translateY(70%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Making the Navigation Bar Responsive */
+
+@media (max-width: 480px){
+    nav ul{
+        list-style-type: none;
+        margin: 15% auto 0 auto;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        width: 100%;
+    }
+    
+    nav ul span{
+        margin-top: 5px;
+        margin-bottom: 25px;
+    }
+    
+    .logo{
+        font-size: 14px;
+    }
+    nav{
+        width: calc(100%-4em)
+    }
+    #overlay .close-button{
+        float: right;
+    }
+    header{
+        width: calc(100%-4em);
+    }
+}
+
+
+/* Homepage Elements */
+
+/* Homepage Heading Text */
+
+.box{
+    position: relative;
+    margin: 1em 0 1em 1em;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.word{
+    display: inline-block;
+}
+
+.word span{
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    animation: animate 10s linear infinite;
+    opacity: 0;
+}
+
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px)
+    }
+    2%{
+        opacity: 1;
+        transform: translateY(0px)
+    }
+    18%{
+        opacity: 1;
+        transform: translateY(0px)
+    }
+    20%{
+        opacity: 0;
+        transform: translateY(50px)
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(50px)
+    }
+}    
+.word span:nth-child(1){
+    animation-delay: 0s;
+}
+
+.word span:nth-child(2){
+    animation-delay: 2.5s;
+}
+
+.word span:nth-child(3){
+    animation-delay: 5s;
+}
+
+.word span:nth-child(4){
+    animation-delay: 7.5s;
+}
+
+/* Homepage Banner */
+
+#banner{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#banner img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Homepage Button */
+
+.buttonarea{
+    position: relative;
+    top: 95%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-bottom: 5em;
+    margin-top: 5em;
+}
+
+.button {
+    background: none;
+    border: 2px solid black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    color: black;
+    font-size: 13px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 12px 20px;
+    min-width: 200px;
+    margin: 10px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    display: inline-block;
+}
+
+.button:hover{
+    color: #fff;
+}
+
+.button::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    transform: scaleX(0);
+}
+
+.button:hover::before{
+    transform: scaleX(1);
+}
+
+/* Homepage - Services */
+
+#services{
+    font-family: 'Montserrat', Helvetica;
+    background-color: #fdfdfd;
+    text-align: center;
+    margin-top: 10em;
+    padding-left: 10em;
+    padding-right: 10em;
+}
+
+#services h1{
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Montserrat';
+    margin: 0 2em 2em 1em;
+    padding-top: 1em;
+    border-top: 2px solid lightgray;
+    width: calc(100%-4em);
+}
+
+#services h2{
+    font-size: 22px;
+    border-bottom: 5px solid #fdfdfd;
+    display: block;
+}
+
+#services p{
+    font-size: 14px;
+    color: #444444;
+}
+
+article{
+    width: 30%;
+    float: left;
+    padding: 1em;
+    text-align: center;
+}
+
+article img{
+    transition: 0.2s linear;
+}
+
+article:hover img{
+    transform: scale(2);
+}
+
+/* Making the Homepage Responsive */
+
+@media (max-width: 480px){
+    article{
+        width: 100%;
+        float: none;
+        padding: 10px;
+        text-align: center;
+    }
+    #services{
+        margin-top: 2em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    #services h1{
+        margin-right: 1em;
+    }
+    #banner img{
+        width: 100%;
+        height: 100%;
+    }
+    .buttonarea .button{
+        font-size: 10px;
+        margin: 5px;
+        padding: 5px;
+    }
+    
+    .box{
+        width: 80%;
+        margin: auto auto auto 20px;
+        font-size: 24px;
+}
+    .word span{
+        margin-top: 30px;
+    }
+}
+
+
+/* Contact Page Elements */
+
+/* Contact Page - Form */
+
+.contact-section{
+    background: #fdfdfd;
+    background-size: cover;
+    padding: 40px 0;
+    font-family: 'Montserrat';
+    z-index: 1;
+}
+
+.contact-section h1{
+    text-align: center;
+    color: black;
+}
+
+.border{
+    width: 100px;
+    height: 5px;
+    background: #000;
+    margin: 40px auto;
+}
+
+.contact-form{
+    max-width: 600px;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.contact-form-text{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    padding: 20px 40px;
+    outline: none;
+    color: black;
+    transition: 0.5s;
+    font-family: 'Montserrat';
+    font-size: 14px;
+}
+
+.contact-form-text:focus{
+    box-shadow: 0 0 10px 4px black;
+}
+
+textarea.contact-form-text{
+    resize: none;
+    height: 120px;
+}
+
+.contact-form-btn{
+    float: right;
+    border: 0;
+    background: black;
+    color: white;
+    padding: 12px 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contact-form-btn:hover{
+    opacity: 0.2;
+}
+
+
+
+/* Contact Page - Social Buttons */
+
+.middle{
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    top: 80%;
+    text-align: center;
+    margin: 3em auto 1em auto;
+}
+
+.btn{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: #f1f1f1;
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 0px 5px 15px -5px #00000070;
+    color: black;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn i{
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.2s linear;
+}
+
+.btn:hover i{
+    transform: scale(1.3);
+    color: #f1f1f1;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: black;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.btn:hover::before{
+    animation: aaa 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+@keyframes aaa{
+    0%{
+       left: -110%;
+        top: 90%; 
+    }50%{
+        left: 10%;
+        top: -30%;
+    }100%{
+        top: -10%;
+        left: -10%; 
+    }
+}
+
+/* Making Contact Page Responsive */
+
+@media (max-width: 480px){
+    .middle{
+        width: 100%;
+    }
+}
+
+
+/* Portfolio Page Elements */
+
+/* Portfolio Grid */
+
+.portfolio_container{
+    width: 1200px;
+    margin: 20px auto;
+    columns: 4;
+    column-gap: 40px;
+}
+
+.portfolio_container .box{
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 0 0 15px 0;
+    background: #fff;
+    overflow: hidden;
+    break-inside: avoid;
+}
+
+.portfolio_container .box .portfolio_img{
+    max-width: 100%;
+    opacity: 1;
+    transition: .3s ease-in;
+}
+
+.portfolio_container .box .portfolio_img:hover{
+    opacity: 0.3;
+    
+}
+
+.portfolio_container .box h2{
+    margin: 12px 10px 0 10px;
+    padding: 0;
+    font-size: 16px;
+}
+
+.portfolio_container .box h3{
+    font-size: 12px;
+    text-transform: uppercase;
+    color: darkgray;
+    font-weight: lighter;
+    margin: 0 10px 0 10px;
+    margin-top: 5px;
+    padding: 0;
+}
+
+.portfolio_container .box p{
+    margin: 10px 10px 0 10px;
+    padding: 0 0 20px;
+    font-size: 13px;
+}
+
+.portfolio_container .box .portfoliolink{
+    margin: 0 10px 0 10px;
+    padding: 0 0 20px 0;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: darkgray;
+}
+
+.portfolio_container .box .portfoliolink img{
+    margin: 0 0 0 5px;
+    opacity: 0.4;
+    padding: 0;
+}
+
+/* Making Portfolio Page Responsive */
+
+@media (max-width: 480px){ 
+    .portfolio_container{
+        columns: 2;
+        width: 100%;
+        column-gap: 5px;
+        margin: 20px auto;
+    }
+}
+
+/* About Page Elements */
+
+/* About Page - Text */
+
+.about-me{
+    width: 40%;
+    margin: auto 30px;
+    float: left;
+}
+
+.about-me h1{
+    font-size: 24px;
+}
+
+.about-me p{
+    font-size: 13px;
+}
+
+.about-me-image{
+    margin: 40px 20px;
+    width: 40%;
+    float: left;
+    margin-left: 50px;
+}
+
+.about-me-image img{
+    width: 100%;
+    transition: opacity 0.5s ease-in;
+    border-radius: 5px;
+}
+
+.about-me-image img:hover{
+    opacity: 0.5;
+}
+
+
+/* About Page - Skills Bar */
+
+.skills{
+    list-style: none;
+    width: 500px;
+    margin: auto auto;
+    float: left;
+    margin-left: 30px;
+}
+
+.skills h1{
+    font-size: 22px;
+}
+
+.skills li{
+    margin: 20px 0;
+}
+
+.skills li h3{
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.bar{
+    background: lightgray;
+    display: block;
+    height: 2px;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 10px darkgray;
+}
+
+.bar span{
+    height: 2px;
+    float: left;
+    background: black;
+}
+
+.skills li .html{
+    width: 90%;
+    animation: html 2s;
+}
+
+.skills li .css{
+    width: 70%;
+    animation: css 2s;
+}
+
+.skills li .javascript{
+    width: 40%;
+    animation: javascript 2s;
+}
+
+.skills li .photoshop{
+    width: 80%;
+    animation: photoshop 2s;
+}
+
+.skills li .illustrator{
+    width: 90%;
+    animation: illustrator 2s;
+}
+
+.skills li .adobexd{
+    width: 70%;
+    animation: adobexd 2s;
+}
+
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+@keyframes javascript{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 40%;
+    }
+}
+
+@keyframes photoshop{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+@keyframes illustrator{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+
+@keyframes adobexd{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+
+
+/* Making the About Page Responsive */
+
+@media (max-width: 480px){
+    .skills{
+        margin: auto 30px;
+        width: 80%;
+    }
+    
+    .about-me-image{
+        margin: auto 30px;
+        width: 80%;
+        
+    }
+    
+    .about-me{
+        width: 80%;
+        margin: auto 30px;
+        float: left;
+    }
+}
