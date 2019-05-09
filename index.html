@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+</head>
+<body>
+    
+    <!-- Nav Bar -->
+    
+    <nav id="overlay">
+        <img src="img/close.png" class="close-button" id="close-menu">  
+        
+        <ul>
+            <li>
+                <a href="index.html">home</a>
+                <span>there's no place like home!</span>
+            </li>
+            
+            <li>
+                <a href="about.html">about me</a>
+                <span>get to know me!</span>
+            </li>
+            
+            <li>
+                <a href="portfolio.html">portfolio</a>
+                <span>check out my work!</span>
+            </li>
+            
+            <li>
+                <a href="contact.html">contact</a>
+                <span>get in contact with me!</span>
+            </li>
+        </ul>
+            
+    </nav>
+    
+    <header>
+        <a href="#" class="logo">jas designs.</a>
+        <img src="img/menu.png" class="menu-button" id="open-menu">
+    </header>
+    
+    <!-- Nav Bar Javascript -->
+    
+    <script>
+        var overlay = document.getElementById('overlay')
+        var closeMenu = document.getElementById('close-menu')
+        
+        document.getElementById('open-menu').addEventListener('click', function() {
+            overlay.classList.add('show-menu');
+        });
+        
+        document.getElementById('close-menu').addEventListener('click', function() {
+            overlay.classList.remove('show-menu');
+        });
+    </script>
+
+
+    <!-- Banner Image -->
+    
+    <section id="banner">
+        <img src="img/header.jpg" height=630px width=1440px>
+    </section>
+    
+    <!-- Button -->
+    
+    <div class="buttonarea">
+        <a href='portfolio.html'><button class="button">check out my work</button></a>
+    </div>
+    
+    
+    <!-- "Services" Section -->
+    
+    <div id="services">
+        <h1>S E R V I C E S</h1>
+        <article>
+            <img src="img/code.png" height="30px" width="35px">
+            <p>---</p>
+            <h2>development</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </article>
+        
+        <article>
+            <img src="img/design.png" height="30px" width="30px">
+            <p>---</p>
+            <h2>web design</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </article>
+        
+        <article>
+            <img src="img/ux.png" height="30px" width="30px">
+            <p>---</p>
+            <h2>user experience</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </article>
+              
+    </div>
+    
+</body>
+</html>
