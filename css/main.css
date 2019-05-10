@@ -247,7 +247,7 @@ nav ul li{
 .button {
     background: none;
     border: 2px solid black;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', Helvetica;
     font-weight: bold;
     border-radius: 5px;
     color: black;
@@ -429,19 +429,21 @@ textarea.contact-form-text{
 .contact-form-btn{
     float: right;
     border: 0;
-    background: black;
-    color: white;
+    background: none;
+    color: black;
     padding: 12px 50px;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     transition: 0.5s;
     font-family: 'Montserrat';
     font-size: 14px;
     font-weight: bold;
+    border: 2px solid black;
 }
 
 .contact-form-btn:hover{
-    opacity: 0.2;
+    color: white;
+    background-color: black;
 }
 
 
@@ -823,7 +825,7 @@ footer .logo{
 
 @media (max-width: 480px){
     footer ul li a{
-        margin-right: 20px;
+        margin-right: 10px;
     }
 }
 
