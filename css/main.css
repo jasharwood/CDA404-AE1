@@ -147,7 +147,7 @@ nav ul li{
         font-size: 14px;
     }
     nav{
-        width: calc(100%-4em)
+        width: calc(100%-4em);
     }
     #overlay .close-button{
         float: right;
@@ -304,6 +304,7 @@ nav ul li{
     padding-top: 1em;
     border-top: 2px solid lightgray;
     width: calc(100%-4em);
+    
 }
 
 #services h2{
@@ -648,8 +649,14 @@ textarea.contact-form-text{
     font-size: 22px;
 }
 
-.skills li{
+.skills ul{
+    margin: 0;
+    padding: 0;
+}
+
+.skills ul li{
     margin: 20px 0;
+    list-style: none;
 }
 
 .skills li h3{
@@ -796,7 +803,7 @@ footer ul{
 
 footer ul li{
     display: inline-block;
-    padding: auto 5px;
+    padding: 0 5px;
 }
 
 
