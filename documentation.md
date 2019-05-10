@@ -1,5 +1,7 @@
 # A Responsive Portfolio Website
 
+Github: https://github.com/jasharwood/CDA404-AE1
+
 ## Contents
 
 1. Background 
@@ -17,7 +19,8 @@ The website that was created was a portfolio which aimed to solve self promotion
 A portfolio is very important for a designer and/or developer to have because it showcases their best work 
 and therefore demonstrates their skills and abilities. For a university student studying web design and development,
 it's important to be able to market creative talent to potential employers. A strong portfolio could be essential
-in securing a placement or permanent job with a potential employer.
+in securing a placement or permanent job with a potential employer. Each page was created using HTML and styled with css. Javascript was used to
+create the navigation menu. 
 
 ## 2. Wire Frames
 
@@ -89,6 +92,8 @@ were fixed.
 The website was tested on both desktop and mobile screens by using development tools such as responsive design mode on the browser. 
 From using this tool, it was discovered that content needed to be displayed in single columns, some font sizes needed to be reduced and 
 margins and/or padding had to be altered. 
+A desktop first approach was used during the development process because the aim was to make a creative portfolio which demonstrated my skills and
+abilities. Therefore, it was important to design for the highest screen size first. It was enough just to make sure the mobile version was functional.
 The overall process that was used whilst developing the portfolio site included writing the code with a live preview of the site
 in easy view. The HTML for each element was added first, followed by styling with css and javascript. Due to the live preview, each change
 could be seen straight away which made it easy to spot any problems. The javascript was included in the html documents because only
